@@ -1,0 +1,2 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+com.yfh.bsecurity.config.BSecurityAutoConfig

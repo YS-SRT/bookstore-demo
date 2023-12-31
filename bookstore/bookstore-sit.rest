@@ -1,0 +1,13 @@
+### User Login
+post http://172.19.97.123:30782/springfm-bookstore/oauth/login
+Content-Type: application/json
+
+{
+  "loginName": "tester",
+  "password": "123456"
+}
+
+###
+get http://172.19.97.123:30782/springfm-bookstore/category/getAll
+Content-Type: application/json
+Authorization: bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImRmZmJmY2I3ZDM4ZjQ2Zjc5NzdiNDU3ODhlMGQ3Njc4In0.eyJqdGkiOiJyM2pNbWl3M2J1ZlNzZWhtUmtjTHZBIiwiaWF0IjoxNjU2MzQyODQ2LCJleHAiOjE2NTYzNTAwNDYsIm5iZiI6MTY1NjM0Mjc4Niwic3ViIjoiYm9va3N0b3JlIiwiYXVkIjoiYXV0aF91c2VyIiwidXNlcklkIjoyLCJ1c2VyVHlwZSI6MCwibG9naW5OYW1lIjoidGVzdGVyIn0.g1u3mVLJ-28ZidLrtyNuVHGQJLARRwSdhL7ye_zLSqy4CVS2yUfxkEm21WLO4Dahy43bRTI4zJsHeWVw3Zs7751_irVZmAH8gezCzCmChlmeSPuYMu9tmxSwj79w08Zs9qzLPnPR4eh4OYyt6ZH1uq3yNIk-ycZh299sayfve-xaD-JBUTu_2XBQICtNDNeJNY5ou9W2alj0vOiHmY-1uED73ZjOYxSiiByMHqxwc1KpubbMez716vgyApgR17CIwPU4KUIg1svO6T8KSaY5xFc7LYZjMJDUD-S6S11-JLAYUKG7pfiJTtXDqfEBJZI_tCGnooNMSTiew-FiA165rQ

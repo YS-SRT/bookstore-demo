@@ -1,0 +1,32 @@
+extend type Query{
+
+   queryBookList: [BookInfoVO!]
+   queryBookById(id: Int):BookInfoVO
+
+}
+
+extend type Mutation{
+    updateBook: BookInfoVO
+}
+
+scalar Date
+
+type BookInfoVO {
+    id: Int
+    name: String
+    author: String
+    isbn: String 
+    tags: String
+    brief: String
+    publishTime: Date
+    createTime: Date
+}
+
+
+type BookParams{
+    id: Int
+    name: String
+    author: String
+    isbn: String
+}
+

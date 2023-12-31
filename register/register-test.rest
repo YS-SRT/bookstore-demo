@@ -1,0 +1,81 @@
+###
+get http://localhost:8002/mgnt/health
+
+###
+get http://localhost:8002/mgnt/configprops
+
+###
+get http://localhost:8002/mgnt/env
+
+
+###
+get http://localhost:8001/swagger-ui.html
+Content-Type: application/xhtml+xml
+Authorization: Bearer SFFJKDSJFDKFJSLKDSFKDJFIIDDSFFDFSD
+
+###
+post http://localhost:8001/oauth/register
+Content-Type: application/json
+
+{
+  "loginName": "tester",
+  "password": "123456",
+  "userName": "tester-name",
+  "sex": 0,
+  "email": "tester@gmail.com",
+  "phoneNumber": "18976021011"
+}
+### VIP login
+post http://localhost:8001/oauth/login
+Content-Type: application/json
+
+{
+  "loginName": "tester",
+  "password": "123456",
+  "grantType": "token"
+}
+
+### admin login
+post http://localhost:8001/oauth/login
+Content-Type: application/json
+
+{
+  "loginName": "admin0",
+  "password": "123456",
+  "grantType": "token"
+}
+
+### admin login
+post http://172.19.103.177:30782/springfm-register/oauth/login
+Content-Type: application/json
+
+{
+  "loginName": "admin0",
+  "password": "123456",
+  "grantType": "token"
+}
+
+###
+get http://172.19.103.177:30782/springfm-register/swagger-ui.html
+Content-Type: application/xhtml+xml
+Authorization: Bearer SFFJKDSJFDKFJSLKDSFKDJFIIDDSFFDFSD
+
+###
+get http://localhost:8001/oauth/getCodeImg
+Content-Type: application/json
+
+### get self info
+get http://localhost:8001/auth/getUserById?userId=2
+Authorization: bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImRmZmJmY2I3ZDM4ZjQ2Zjc5NzdiNDU3ODhlMGQ3Njc4In0.eyJqdGkiOiIwREYzcC0wejU3OExaaTZuVzdLVURBIiwiaWF0IjoxNjUyNzA1NjEyLCJleHAiOjE2NTI3MTI4MTIsIm5iZiI6MTY1MjcwNTU1Miwic3ViIjoiYm9va3N0b3JlIiwiYXVkIjoiYXV0aF91c2VyIiwidXNlcklkIjoxLCJ1c2VyVHlwZSI6OTksImxvZ2luTmFtZSI6ImFkbWluMCJ9.k2JrkTAdxYpURjuH8TuJjFXhGz5pMV04OQWWLXlZITSMkVIJRdzKyZPWtUC7q_tbh8nSvm1U8QxZUBICeM3q56rRgEBNE02uzhjOVu8ilt6qzIAjh9E3mQbBrCdRmBwDqqMLhyiA7XuhpEdnw0ttMeaxnDl--fmp5tey4KAmhhfwsKHObmR1_wwJdWdqoK3dpixFtaANHG9xrpyFFOG-OPYosBJHn97gA9vyJhRuwiLmAC2tjoLWzWAtpZc_uX3xxF1daS5Cp11hmnspHXION6ysZUGJZ0YLrqsZ1UiiMGLQjAnO64dE9r9uWM9Yf7o1BED8B0ReZjbgXIyec4uJ3g
+
+### user get other's info
+get http://localhost:8001/auth/getUserById?userId=1
+Authorization: bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImRmZmJmY2I3ZDM4ZjQ2Zjc5NzdiNDU3ODhlMGQ3Njc4In0.eyJqdGkiOiIwREYzcC0wejU3OExaaTZuVzdLVURBIiwiaWF0IjoxNjUyNzA1NjEyLCJleHAiOjE2NTI3MTI4MTIsIm5iZiI6MTY1MjcwNTU1Miwic3ViIjoiYm9va3N0b3JlIiwiYXVkIjoiYXV0aF91c2VyIiwidXNlcklkIjoxLCJ1c2VyVHlwZSI6OTksImxvZ2luTmFtZSI6ImFkbWluMCJ9.k2JrkTAdxYpURjuH8TuJjFXhGz5pMV04OQWWLXlZITSMkVIJRdzKyZPWtUC7q_tbh8nSvm1U8QxZUBICeM3q56rRgEBNE02uzhjOVu8ilt6qzIAjh9E3mQbBrCdRmBwDqqMLhyiA7XuhpEdnw0ttMeaxnDl--fmp5tey4KAmhhfwsKHObmR1_wwJdWdqoK3dpixFtaANHG9xrpyFFOG-OPYosBJHn97gA9vyJhRuwiLmAC2tjoLWzWAtpZc_uX3xxF1daS5Cp11hmnspHXION6ysZUGJZ0YLrqsZ1UiiMGLQjAnO64dE9r9uWM9Yf7o1BED8B0ReZjbgXIyec4uJ3g
+
+
+### admin get other's info
+get http://localhost:8001/auth/getUserById?userId=2
+Authorization: bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImRmZmJmY2I3ZDM4ZjQ2Zjc5NzdiNDU3ODhlMGQ3Njc4In0.eyJqdGkiOiIwREYzcC0wejU3OExaaTZuVzdLVURBIiwiaWF0IjoxNjUyNzA1NjEyLCJleHAiOjE2NTI3MTI4MTIsIm5iZiI6MTY1MjcwNTU1Miwic3ViIjoiYm9va3N0b3JlIiwiYXVkIjoiYXV0aF91c2VyIiwidXNlcklkIjoxLCJ1c2VyVHlwZSI6OTksImxvZ2luTmFtZSI6ImFkbWluMCJ9.k2JrkTAdxYpURjuH8TuJjFXhGz5pMV04OQWWLXlZITSMkVIJRdzKyZPWtUC7q_tbh8nSvm1U8QxZUBICeM3q56rRgEBNE02uzhjOVu8ilt6qzIAjh9E3mQbBrCdRmBwDqqMLhyiA7XuhpEdnw0ttMeaxnDl--fmp5tey4KAmhhfwsKHObmR1_wwJdWdqoK3dpixFtaANHG9xrpyFFOG-OPYosBJHn97gA9vyJhRuwiLmAC2tjoLWzWAtpZc_uX3xxF1daS5Cp11hmnspHXION6ysZUGJZ0YLrqsZ1UiiMGLQjAnO64dE9r9uWM9Yf7o1BED8B0ReZjbgXIyec4uJ3g
+
+
+

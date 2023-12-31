@@ -1,0 +1,9 @@
+###
+get http://localhost:8000/callable
+
+
+###
+get http://localhost:8000/deferred
+
+###
+get http://localhost:8000/webasynctask
